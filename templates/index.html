@@ -1,0 +1,28 @@
+
+
+<html>
+<head>
+    <title>Buscar CEP</title>
+</head>
+<body>
+
+    <h1>Consulta de CEP</h1>
+
+    <form action="/buscarcep">
+        Digite o CEP:
+        <input type="text" name="cep">
+        <input type="submit" value="Buscar">
+    </form>
+
+    {% if endereco %}
+        <h2>Endereço encontrado:</h2>
+
+        CEP: {{ cep }} <br>
+        Logradouro: {{ endereco }} <br>
+        Bairro: {{ bairro }} <br>
+        Cidade: {{ cidade }} <br>
+        Estado: {{ estado }}
+    {% endif %}
+
+</body>
+</html>
